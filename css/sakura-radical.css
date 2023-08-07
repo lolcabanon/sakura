@@ -30,8 +30,8 @@ body {
   }
 }
 main {
-  max-width: 80ch;
-  width: 80ch;
+  max-width: 96vw;
+  width: 96vw;
   margin: auto;
 }
 
@@ -95,9 +95,11 @@ a {
   text-decoration: none;
   color: #D415D4;
 }
+
 a:visited {
   color: #a610a6;
 }
+
 a:hover {
   color: #00ffff;
   border-bottom: 2px solid #32cd32;
@@ -182,6 +184,7 @@ input,
 textarea {
   border: 1px solid #32cd32;
 }
+
 input:focus,
 textarea:focus {
   border: 1px solid #D415D4;
@@ -209,6 +212,7 @@ input[type=file]::file-selector-button {
   cursor: pointer;
   box-sizing: border-box;
 }
+
 .button[disabled],
 button[disabled],
 input[type=submit][disabled],
@@ -218,6 +222,7 @@ input[type=file]::file-selector-button[disabled] {
   cursor: default;
   opacity: 0.5;
 }
+
 .button:focus:enabled, .button:hover:enabled,
 button:focus:enabled,
 button:hover:enabled,
@@ -247,6 +252,7 @@ input {
   box-shadow: none;
   box-sizing: border-box;
 }
+
 textarea:focus,
 select:focus,
 input:focus {
@@ -265,5 +271,7 @@ fieldset {
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
+
+
 
 /*# sourceMappingURL=sakura-radical.css.map */
