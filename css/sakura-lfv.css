@@ -1,4 +1,3 @@
-/* $color-text: #dedce5; */
 /* Sakura.css v1.4.1
  * ================
  * Minimal css theme.
@@ -9,11 +8,11 @@ html {
   --font-family-base: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
   --font-family-heading: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
   --font-size-base: 1.8rem;
-  --color-text: #c9c9c9;
-  --color-bg: #222222;
-  --color-bg-alt: #4a4a4a;
-  --color-blossom: #ffffff;
-  --color-fade: #c9c9c9;
+  --color-text: #dbdbdb;
+  --color-bg: #2c2c2c;
+  --color-bg-alt: #353535;
+  --color-blossom: #fce0b3;
+  --color-fade: #f9b950;
   font-size: 62.5%;
   font-family: var(--font-family-base);
 }
@@ -271,7 +270,7 @@ input:focus {
 }
 
 input[type=checkbox]:focus {
-  outline: 1px dotted #ffffff;
+  outline: 1px dotted #fce0b3;
 }
 
 label,
@@ -282,4 +281,4 @@ fieldset {
   font-weight: 600;
 }
 
-/*# sourceMappingURL=sakura-dark.css.map */
+/*# sourceMappingURL=sakura-lfv.css.map */

@@ -6,28 +6,36 @@
  */
 /* Body */
 html {
+  --font-family-base: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+  --font-family-heading: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+  --font-size-base: 1.8rem;
+  --color-text: #d9d8dc;
+  --color-bg: #120c0e;
+  --color-bg-alt: #40363a;
+  --color-blossom: #eb99a1;
+  --color-fade: #DA4453;
   font-size: 62.5%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-family: var(--font-family-base);
 }
 
 body {
-  font-size: 1.8rem;
+  font-size: var(--font-size-base);
   line-height: 1.618;
   /* max-width: 38em; */
   margin: auto;
-  color: #d9d8dc;
-  background-color: #120c0e;
-  padding: 13px;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  overflow-y: scroll;
 }
 
 @media (max-width: 684px) {
   body {
-    font-size: 1.53rem;
+    --font-size-base: $font-size-base * 0.85;
   }
 }
 @media (max-width: 382px) {
   body {
-    font-size: 1.35rem;
+    --font-size-base: $font-size-base * 0.75;
   }
 }
 main {
@@ -43,7 +51,7 @@ h4,
 h5,
 h6 {
   line-height: 1.1;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-family: var(--font-family-heading);
   font-weight: 700;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
@@ -89,21 +97,26 @@ sup {
 }
 
 hr {
-  border-color: #eb99a1;
+  border-color: var(--color-blossom);
 }
 
 a {
   text-decoration: none;
-  color: #eb99a1;
+  color: var(--color-blossom);
 }
-
-a:visited {
-  color: #e26f7a;
-}
-
 a:hover {
-  color: #DA4453;
-  border-bottom: 2px solid #d9d8dc;
+  position: relative;
+  color: var(--color-fade);
+  overflow: hidden;
+}
+a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: currentColor;
 }
 
 ul {
@@ -123,9 +136,9 @@ blockquote {
   padding-top: 0.8em;
   padding-bottom: 0.8em;
   padding-right: 0.8em;
-  border-left: 5px solid #eb99a1;
+  border-left: 5px solid var(--color-blossom);
   margin-bottom: 2.5rem;
-  background-color: #40363a;
+  background-color: var(--color-bg-alt);
 }
 
 blockquote p {
@@ -142,7 +155,7 @@ video {
 
 /* Pre and Code */
 pre {
-  background-color: #40363a;
+  background-color: var(--color-bg-alt);
   display: block;
   padding: 1em;
   overflow-x: auto;
@@ -156,7 +169,7 @@ kbd,
 samp {
   font-size: 0.9em;
   padding: 0 0.5em;
-  background-color: #40363a;
+  background-color: var(--color-bg-alt);
   white-space: pre-wrap;
 }
 
@@ -177,18 +190,17 @@ table {
 td,
 th {
   padding: 0.5em;
-  border-bottom: 1px solid #40363a;
+  border-bottom: 1px solid var(--color-bg-alt);
 }
 
 /* Buttons, forms and input */
 input,
 textarea {
-  border: 1px solid #d9d8dc;
+  border: 1px solid var(--color-text);
 }
-
 input:focus,
 textarea:focus {
-  border: 1px solid #eb99a1;
+  border: 1px solid var(--color-blossom);
 }
 
 textarea {
@@ -206,14 +218,13 @@ input[type=file]::file-selector-button {
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-  background-color: #eb99a1;
-  color: #120c0e;
+  background-color: var(--color-blossom);
+  color: var(--color-bg);
   border-radius: 1px;
-  border: 1px solid #eb99a1;
+  border: 1px solid var(--color-blossom);
   cursor: pointer;
   box-sizing: border-box;
 }
-
 .button[disabled],
 button[disabled],
 input[type=submit][disabled],
@@ -223,7 +234,6 @@ input[type=file]::file-selector-button[disabled] {
   cursor: default;
   opacity: 0.5;
 }
-
 .button:focus:enabled, .button:hover:enabled,
 button:focus:enabled,
 button:hover:enabled,
@@ -235,29 +245,28 @@ input[type=button]:focus:enabled,
 input[type=button]:hover:enabled,
 input[type=file]::file-selector-button:focus:enabled,
 input[type=file]::file-selector-button:hover:enabled {
-  background-color: #DA4453;
-  border-color: #DA4453;
-  color: #120c0e;
+  background-color: var(--color-fade);
+  border-color: var(--color-fade);
+  color: var(--color-bg);
   outline: 0;
 }
 
 textarea,
 select,
 input {
-  color: #d9d8dc;
+  color: var(--color-text);
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   margin-bottom: 10px;
-  background-color: #40363a;
-  border: 1px solid #40363a;
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-bg-alt);
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
 }
-
 textarea:focus,
 select:focus,
 input:focus {
-  border: 1px solid #eb99a1;
+  border: 1px solid var(--color-blossom);
   outline: 0;
 }
 
@@ -272,7 +281,5 @@ fieldset {
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
-
-
 
 /*# sourceMappingURL=sakura-vader.css.map */

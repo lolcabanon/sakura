@@ -7,30 +7,40 @@
 /* Body */
 
 html {
+  --font-family-base: #{$font-family-base};
+  --font-family-heading: #{$font-family-heading};
+  // $font-size-base must be a rem value
+  --font-size-base: #{$font-size-base};
+  --color-text: #{$color-text};
+  --color-bg: #{$color-bg};
+  --color-bg-alt: #{$color-bg-alt};
+  --color-blossom: #{$color-blossom};
+  --color-fade: #{$color-fade};
+
   font-size: 62.5%; // So that root size becomes 10px
-  font-family: $font-family-base;
+  font-family: var(--font-family-base);
 }
 
 body {
-  // $font-size-base must be a rem value
-  font-size: $font-size-base;
+  font-size: var(--font-size-base);
   line-height: 1.618;
   /* max-width: 38em; */
   margin: auto;
-  color: $color-text;
-  background-color: $color-bg;
-  padding: 13px;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  // padding: 13px;
+  overflow-y: scroll;
 }
 
 @media (max-width: 684px) {
   body {
-    font-size: $font-size-base * 0.85;
+    --font-size-base: $font-size-base * 0.85;
   }
 }
 
 @media (max-width: 382px) {
   body {
-    font-size: $font-size-base * 0.75;
+    --font-size-base: $font-size-base * 0.75;
   }
 }
 
@@ -56,7 +66,7 @@ h4,
 h5,
 h6 {
   line-height: 1.1;
-  font-family: $font-family-heading;
+  font-family: var(--font-family-heading);
   font-weight: 700;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
@@ -94,20 +104,32 @@ sup {
 }
 
 hr {
-  border-color: $color-blossom;
+  border-color: var(--color-blossom);
 }
 
 a {
   text-decoration: none;
-  color: $color-blossom;
+  color: var(--color-blossom);
 
-  &:visited {
-    color: darken($color-blossom, 10%);
-  }
+  // &:visited {
+  //   color: darken($color-blossom, 10%);
+  // }
 
   &:hover {
-    color: $color-fade;
-    border-bottom: 2px solid $color-text;
+    position: relative;
+    color: var(--color-fade);
+    // border-bottom: 2px solid var(--color-text);
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: currentColor;
+    }
   }
 }
 
@@ -128,9 +150,9 @@ blockquote {
   padding-top: 0.8em;
   padding-bottom: 0.8em;
   padding-right: 0.8em;
-  border-left: 5px solid $color-blossom;
+  border-left: 5px solid var(--color-blossom);
   margin-bottom: 2.5rem;
-  background-color: $color-bg-alt;
+  background-color: var(--color-bg-alt);
 }
 
 blockquote p {
@@ -148,7 +170,7 @@ video {
 /* Pre and Code */
 
 pre {
-  background-color: $color-bg-alt;
+  background-color: var(--color-bg-alt);
   display: block;
   padding: 1em;
   overflow-x: auto;
@@ -162,7 +184,7 @@ kbd,
 samp {
   font-size: 0.9em;
   padding: 0 0.5em;
-  background-color: $color-bg-alt;
+  background-color: var(--color-bg-alt);
   white-space: pre-wrap;
 }
 
@@ -184,17 +206,17 @@ table {
 td,
 th {
   padding: 0.5em;
-  border-bottom: 1px solid $color-bg-alt;
+  border-bottom: 1px solid var(--color-bg-alt);
 }
 
 /* Buttons, forms and input */
 
 input,
 textarea {
-  border: 1px solid $color-text;
+  border: 1px solid var(--color-text);
 
   &:focus {
-    border: 1px solid $color-blossom;
+    border: 1px solid var(--color-blossom);
   }
 }
 
@@ -214,10 +236,10 @@ input[type='file']::file-selector-button {
   text-decoration: none;
   white-space: nowrap;
 
-  background-color: $color-blossom;
-  color: $color-bg;
+  background-color: var(--color-blossom);
+  color: var(--color-bg);
   border-radius: 1px;
-  border: 1px solid $color-blossom;
+  border: 1px solid var(--color-blossom);
   cursor: pointer;
   box-sizing: border-box;
 
@@ -228,9 +250,9 @@ input[type='file']::file-selector-button {
 
   &:focus:enabled,
   &:hover:enabled {
-    background-color: $color-fade;
-    border-color: $color-fade;
-    color: $color-bg;
+    background-color: var(--color-fade);
+    border-color: var(--color-fade);
+    color: var(--color-bg);
     outline: 0;
   }
 }
@@ -238,17 +260,17 @@ input[type='file']::file-selector-button {
 textarea,
 select,
 input {
-  color: $color-text;
+  color: var(--color-text);
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   margin-bottom: 10px;
-  background-color: $color-bg-alt;
-  border: 1px solid $color-bg-alt;
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-bg-alt);
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
 
   &:focus {
-    border: 1px solid $color-blossom;
+    border: 1px solid var(--color-blossom);
     outline: 0;
   }
 }
