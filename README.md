@@ -1,4 +1,4 @@
-# [sakura](https://oxal.org/projects/sakura): a minimal, ***classless*** CSS *framework* / **theme**.
+# [sakura](https://oxal.org/projects/sakura): a minimal, **_classless_** CSS _framework_ / **theme**.
 
 [![npm][npm-image]][npm-url]
 
@@ -25,12 +25,12 @@ folder of this repository.
 
 Compare a live page **WITH** and **WITHOUT** sakura.
 
-* [https://oxal.org/projects/sakura/demo](https://oxal.org/projects/sakura/demo)
+- [https://oxal.org/projects/sakura/demo](https://oxal.org/projects/sakura/demo)
 
 Also, my blog is a nice place to check sakura in action with heavy text (it has
 a "change theme" button on the top as well):
 
-* [oxal.org/blog](https://oxal.org/blog/)
+- [oxal.org/blog](https://oxal.org/blog/)
 
 ## Bookmark
 
@@ -40,7 +40,7 @@ outdated 90s design (i.e. no CSS)?
 If so, enable sakura on any website using the following
 instructions:
 
-* [https://oxal.org/projects/sakura/bookmark](https://oxal.org/projects/sakura/bookmark)
+- [https://oxal.org/projects/sakura/bookmark](https://oxal.org/projects/sakura/bookmark)
 
 ## Why? - Reasons to use sakura
 
@@ -48,7 +48,7 @@ How exactly does sakura help you? I had a discussion about this on the
 [reddit thread](https://www.reddit.com/r/webdev/comments/68zpdp/sakura_a_minimal_classless_css_theme_just_drop_it/).
 
 - Just drop it in, even on existing HTML content, to get a pretty-looking
-  website (everything *"just works"*)
+  website (everything _"just works"_)
 - Quick prototyping, especially when working on backend sites and can't yet be
   bothered to fidget with CSS/HTML
 - Building a quick (but pretty) site/blog for your best friend or aunt!
@@ -62,75 +62,75 @@ How exactly does sakura help you? I had a discussion about this on the
 
 ## Installation
 
-**Manually** (*recommended*):
+**Manually** (_recommended_):
 
 1. Download the file:
 
-    ```bash
-    wget "https://raw.githubusercontent.com/oxalorg/sakura/master/css/sakura.css"
-    ```
+   ```bash
+   wget "https://raw.githubusercontent.com/oxalorg/sakura/master/css/sakura.css"
+   ```
 
-    **OR** download directly:
-    [sakura.css](https://raw.githubusercontent.com/oxalorg/sakura/master/css/sakura.css)
+   **OR** download directly:
+   [sakura.css](https://raw.githubusercontent.com/oxalorg/sakura/master/css/sakura.css)
 
 2. Link it from HTML:
 
-    ```html
-    <link rel="stylesheet" href="sakura.css" type="text/css">
-    ```
+   ```html
+   <link rel="stylesheet" href="sakura.css" type="text/css" />
+   ```
 
 **CDN**:
 
 1. Simply add this in your `<head>` tag:
 
-    ```html
-    <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
-    ```
+   ```html
+   <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css" />
+   ```
 
 **Package Manager**:
 
 1. Install from npm:
 
-    ```bash
-    npm install sakura.css
-    ```
+   ```bash
+   npm install sakura.css
+   ```
 
 2. Install from Yarn:
 
-    ```bash
-    yarn add sakura.css
-    ```
+   ```bash
+   yarn add sakura.css
+   ```
 
-**(Optional)** *but recommended* to use
+**(Optional)** _but recommended_ to use
 [normalize.css](https://github.com/necolas/normalize.css/)
-to reset *before* using sakura.
+to reset _before_ using sakura.
 
 ## Sites using sakura
 
-* [https://oxal.org/blog/](https://oxal.org/blog/)
-* [http://computableverse.com](http://computableverse.com)
-* [https://gaiwan.co](https://gaiwan.co)
-* [https://www.softwareyoga.com/](https://www.softwareyoga.com)
-* [https://www.taazakitchen.com/](https://www.taazakitchen.com)
-* [https://audioviz.surge.sh/vex.html](https://audioviz.surge.sh/vex.html)
-* [https://chocopy.org](https://chocopy.org)
-* [https://wasmbyexample.dev/](https://wasmbyexample.dev/)
-* [https://ninjas.cl/](https://ninjas.cl/)
-* [https://minidown.atusy.net](https://minidown.atusy.net)
-* [https://jvanelian.dev](https://jvanelian.dev)
-* [https://mousikofidi.info/](https://mousikofidi.info/)
-* [https://ocamlbook.org](https://ocamlbook.org)
-* [https://monkeyjunglejuice.github.io](https://monkeyjunglejuice.github.io)
-* [https://reinforce.moe/about-en.md](https://reinforce.moe/about-en.md)
-* [https://4clojure.oxal.org/](https://4clojure.oxal.org/)
-* [https://yunru.se](https://yunru.se)
-* [https://articleparser.vercel.app/](https://articleparser.vercel.app/)
-* [https://solely.gay](https://solely.gay)
-* [https://bluelander.bearblog.dev/](https://bluelander.bearblog.dev/)
-* [https://onefetch.dev/](https://onefetch.dev/)
+- [https://oxal.org/blog/](https://oxal.org/blog/)
+- [http://computableverse.com](http://computableverse.com)
+- [https://gaiwan.co](https://gaiwan.co)
+- [https://www.softwareyoga.com/](https://www.softwareyoga.com)
+- [https://www.taazakitchen.com/](https://www.taazakitchen.com)
+- [https://audioviz.surge.sh/vex.html](https://audioviz.surge.sh/vex.html)
+- [https://chocopy.org](https://chocopy.org)
+- [https://wasmbyexample.dev/](https://wasmbyexample.dev/)
+- [https://ninjas.cl/](https://ninjas.cl/)
+- [https://minidown.atusy.net](https://minidown.atusy.net)
+- [https://jvanelian.dev](https://jvanelian.dev)
+- [https://mousikofidi.info/](https://mousikofidi.info/)
+- [https://ocamlbook.org](https://ocamlbook.org)
+- [https://monkeyjunglejuice.github.io](https://monkeyjunglejuice.github.io)
+- [https://reinforce.moe/about-en.md](https://reinforce.moe/about-en.md)
+- [https://4clojure.oxal.org/](https://4clojure.oxal.org/)
+- [https://yunru.se](https://yunru.se)
+- [https://articleparser.vercel.app/](https://articleparser.vercel.app/)
+- [https://solely.gay](https://solely.gay)
+- [https://bluelander.bearblog.dev/](https://bluelander.bearblog.dev/)
+- [https://onefetch.dev/](https://onefetch.dev/)
 
-***If you're using sakura, please let me know or make a pull request adding in
-your name. I would be super happy!! `^_^`***
+**_If you're using sakura, please let me know or make a pull request adding in
+your name. I would be super happy!! `^_^`_**
 
 ## Theming
 
@@ -150,13 +150,13 @@ $color-fade: #5e5e5e;
    bg-alt is used for code-blocks etc
 */
 $color-bg: #f9f9f9;
-$color-bg-alt: #C7E3BE;
+$color-bg-alt: #c7e3be;
 
 /* color of all the text on the page */
 $color-text: #4a4a4a;
 $font-size-base: 1.8rem;
 
-@import "main";
+@import 'main';
 ```
 
 ## Dark mode
@@ -174,13 +174,14 @@ Please have a look at the [instructions](CONTRIBUTING.md).
 
 ## Contributors
 
-* Bookmarklet was added by [Zhouzi](https://github.com/Zhouzi).
-* The image is credited to
-[Deedster](https://pixabay.com/en/users/Deedster-2541644/).
+- Bookmarklet was added by [Zhouzi](https://github.com/Zhouzi).
+- The image is credited to
+  [Deedster](https://pixabay.com/en/users/Deedster-2541644/).
 
 ## Share some <3
 
 > Between our two lives there is also the life of the cherry blossom.
-> - *Basho Matsuo*
+>
+> - _Basho Matsuo_
 
 Please leave a star. :)
